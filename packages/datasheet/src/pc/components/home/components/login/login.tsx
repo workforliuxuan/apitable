@@ -216,6 +216,12 @@ export const Login: React.FC<React.PropsWithChildren<ILoginProps>> = (props) => 
       <Button className={styles.loginBtn} color="primary" size="large" block loading={loading} onClick={handleSubmit}>
         {t(Strings.apitable_sign_in)}
       </Button>
+      <div className={styles.switchContent}>
+        <p>{t(Strings.apitable_no_account)}</p>
+        <LinkButton underline={false} component="button" onClick={() => switchClick(ActionType.SignUp)} style={{ paddingRight: 0 }}>
+          {t(Strings.apitable_sign_up)}
+        </LinkButton>
+      </div>
     </div>
   );
 };
